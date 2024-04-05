@@ -6,11 +6,9 @@ FROM mlocati/php-extension-installer:2 AS php_extension_installer_upstream
 FROM composer/composer:2-bin AS composer_upstream
 FROM caddy:2-alpine AS caddy_upstream
 
-
 # The different stages of this Dockerfile are meant to be built into separate images
 # https://docs.docker.com/develop/develop-images/multistage-build/#stop-at-a-specific-build-stage
 # https://docs.docker.com/compose/compose-file/#target
-
 
 # Base PHP image
 FROM php_upstream AS php_base
@@ -25,6 +23,8 @@ RUN apk add --no-cache \
 		file \
 		gettext \
 		git \
+    	autoconf \
+    	gcc \
 	;
 
 # php extensions installer: https://github.com/mlocati/docker-php-extension-installer
@@ -37,6 +37,11 @@ RUN set -eux; \
 		opcache \
 		zip \
     ;
+
+###> php pecl extensions ###
+RUN pecl install -D 'enable-sockets="no" enable-openssl="no" enable-http2="no" enable-mysqlnd="no" enable-hook-curl="no" enable-cares="no" with-postgres="no"' openswoole-22.1.2 \
+    && docker-php-ext-enable openswoole
+###< php pecl extensions ###
 
 ###> recipes ###
 ###> doctrine/doctrine-bundle ###

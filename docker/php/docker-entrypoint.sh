@@ -12,7 +12,7 @@ if [ "$1" = 'php-fpm' ] || [ "$1" = 'php' ] || [ "$1" = 'bin/console' ]; then
 
 	if [ ! -f composer.json ]; then
 		rm -Rf tmp/
-		composer create-project "symfony/skeleton $SYMFONY_VERSION" tmp --stability=stable --prefer-dist --no-progress --no-interaction --no-install
+		composer create-project "symfony/skeleton 7.0.6" tmp --stability=stable --prefer-dist --no-progress --no-interaction --no-install
 
 		cd tmp
 		composer require "php:>=$PHP_VERSION"
