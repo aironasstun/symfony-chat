@@ -38,10 +38,6 @@ RUN set -eux; \
 		zip \
     ;
 
-###> php pecl extensions ###
-RUN pecl install -D 'enable-sockets="no" enable-openssl="no" enable-http2="no" enable-mysqlnd="no" enable-hook-curl="no" enable-cares="no" with-postgres="no"' openswoole-22.1.2 \
-    && docker-php-ext-enable openswoole
-###< php pecl extensions ###
 
 ###> recipes ###
 ###> doctrine/doctrine-bundle ###
@@ -86,6 +82,7 @@ RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini"
 RUN set -eux; \
 	install-php-extensions \
     	xdebug \
+    	openswoole \
     ;
 
 COPY --link docker/php/conf.d/app.dev.ini $PHP_INI_DIR/conf.d/
