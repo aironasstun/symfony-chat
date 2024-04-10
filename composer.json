@@ -72,5 +72,8 @@
             "require": "7.0.*",
             "docker": true
         }
+    },
+    "require-dev": {
+        "openswoole/ide-helper": "~22.0.1"
     }
 }

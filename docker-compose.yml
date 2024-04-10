@@ -18,7 +18,7 @@ services:
       retries: 3
       start_period: 30s
     environment:
-      # Run "composer require symfony/mercure-bundle" to install and configure the Mercure integration
+#       Run "composer require symfony/mercure-bundle" to install and configure the Mercure integration
       MERCURE_URL: ${CADDY_MERCURE_URL:-http://caddy/.well-known/mercure}
       MERCURE_PUBLIC_URL: https://${SERVER_NAME:-localhost}/.well-known/mercure
       MERCURE_JWT_SECRET: ${CADDY_MERCURE_JWT_SECRET:-!ChangeThisMercureHubJWTSecretKey!}
@@ -39,6 +39,8 @@ services:
       - caddy_data:/data
       - caddy_config:/config
     ports:
+      # OpenSwoole
+      - "9501:9501"
       # HTTP
       - target: 80
         published: ${HTTP_PORT:-80}
