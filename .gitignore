@@ -16,3 +16,4 @@
 ###> other ###
 /.idea
 /docs/
+/docker/caddy/certs/

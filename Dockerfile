@@ -23,8 +23,6 @@ RUN apk add --no-cache \
 		file \
 		gettext \
 		git \
-    	autoconf \
-    	gcc \
 	;
 
 # php extensions installer: https://github.com/mlocati/docker-php-extension-installer
@@ -82,7 +80,6 @@ RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini"
 RUN set -eux; \
 	install-php-extensions \
     	xdebug \
-    	openswoole \
     ;
 
 COPY --link docker/php/conf.d/app.dev.ini $PHP_INI_DIR/conf.d/

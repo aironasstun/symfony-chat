@@ -6,8 +6,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      spacing: {
+        'chat': '70vh',
+      },
       backgroundImage: {
-        'jumbotron-image': "url('/images/background.jpg')",
+        'jumbotron-image': "url('../images/background.jpg')",
       },
     },
   },
