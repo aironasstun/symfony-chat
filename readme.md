@@ -15,3 +15,5 @@ For entering php container
 For launching tailwind building
 
 ``bin/console tailwind:build --watch``
+
+https://github.com/aironasstun/openswoole-chat is essential for running the chat.
