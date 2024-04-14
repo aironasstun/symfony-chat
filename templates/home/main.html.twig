@@ -4,6 +4,8 @@
 
     {% include "components/jumbotron.html.twig" %}
 
-    {% include "components/chat/chat.html.twig" %}
+    {% if app.user is not same as null %}
+        {% include "components/chat/chat.html.twig" %}
+    {% endif %}
 
 {% endblock %}
