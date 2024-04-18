@@ -33,8 +33,8 @@ module.exports = {
         dark: '#425a67',
       },
       'accent': {
-        light: '#585c89',
-        dark: '#767aa7',
+        light: '#81a29b',
+        dark: '#5d7e77',
       },
     },
     extend: {

@@ -3,7 +3,7 @@ function appendMessage(message) {
       '<div class="flex justify-start mb-4">\n' +
     '    <div>\n' +
     '        <div\n' +
-    '            class="ml-2 py-3 px-4 bg-gray-400 rounded-br-3xl rounded-tr-3xl rounded-tl-xl text-white mb-2"\n' +
+    '            class="ml-2 py-3 px-4 bg-accent-dark rounded-br-3xl rounded-tr-3xl rounded-tl-xl text-white mb-2"\n' +
     '        >' + message +
     '        </div>\n' +
     '    </div>\n' +
