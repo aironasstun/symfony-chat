@@ -32,6 +32,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column]
     private ?string $password = null;
 
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $chatUsername = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -105,5 +108,17 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     {
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
+    }
+
+    public function getChatUsername(): ?string
+    {
+        return $this->chatUsername;
+    }
+
+    public function setChatUsername(?string $chatUsername): static
+    {
+        $this->chatUsername = $chatUsername;
+
+        return $this;
     }
 }

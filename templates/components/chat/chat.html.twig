@@ -1,6 +1,9 @@
 <script src="{{ asset('lib/chat.js') }}"></script>
 
 <div class="container mx-auto mt-32 mb-16 shadow-lg rounded-lg ">
+
+    {% include "components/chat/header/header.html.twig" %}
+
     <div class="flex flex-row justify-between bg-secondary-dark">
 
 {#        {% include "components/chat/chat_left.html.twig" %}#}
@@ -17,6 +20,7 @@
                     class="w-full bg-accent-dark py-5 px-3 rounded-xl"
                     type="text"
                     placeholder="type your message here..."
+                    maxlength="2000"
                 />
             </div>
         </div>
