@@ -3,9 +3,9 @@
 {% block title %}Log in!{% endblock %}
 
 {% block body %}
-    <section class="bg-background-light dark:bg-background-dark">
+    <section class="bg-custom-background">
         <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-            <div class="w-full bg-secondary-light dark:bg-secondary-dark rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 ">
+            <div class="w-full bg-custom-primary-900 rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 ">
                 <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
 
                     {% if error %}
@@ -15,7 +15,7 @@
                     {% endif %}
 
                     {% if app.user %}
-                        <div class="p-4 mb-4 text-sm rounded-lg bg-blue-50 dark:bg-gray-800 text-text-light dark:text-text-dark">
+                        <div class="p-4 mb-4 text-sm rounded-lg bg-blue-50 dark:bg-gray-800 text-custom-text ">
                             You are logged in as {{ app.user.userIdentifier }}
                             <div>
                                 <a href="{{ path('app_logout') }}">Click here to logout</a>
@@ -23,16 +23,16 @@
                         </div>
                     {% endif %}
 
-                    <h1 class="text-xl font-bold leading-tight tracking-tight md:text-2xl text-text-light dark:text-text-dark">
+                    <h1 class="text-xl font-bold leading-tight tracking-tight md:text-2xl text-custom-text ">
                         Sign in to your account
                     </h1>
                     <form class="space-y-4 md:space-y-6" method="post">
                         <div>
-                            <label for="username" class="block mb-2 text-sm font-medium text-text-light dark:text-text-dark">Your email</label>
+                            <label for="username" class="block mb-2 text-sm font-medium text-custom-text ">Your email</label>
                             <input type="email" name="_username" id="username" value="{{ last_username }}" class="bg-blue-50 dark:bg-gray-800 border border-gray-300 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="example@email.com" required autofocus>
                         </div>
                         <div>
-                            <label for="password" class="block mb-2 text-sm font-medium text-text-light dark:text-text-dark">Password</label>
+                            <label for="password" class="block mb-2 text-sm font-medium text-custom-text ">Password</label>
                             <input type="password" name="_password" id="password" placeholder="••••••••" class="bg-blue-50 dark:bg-gray-800 border border-gray-300 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
                         </div>
                         <div>
@@ -51,7 +51,7 @@
 {#                            </div>#}
 {#                            <a href="#" class="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500">Forgot password?</a>#}
 {#                        </div>#}
-                        <button type="submit" class="w-full bg-accent-light dark:bg-accent-dark text-text-light dark:text-text-dark focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Sign in</button>
+                        <button type="submit" class="w-full bg-custom-accent  text-custom-text  focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Sign in</button>
 {#                        <p class="text-sm font-light text-gray-500 dark:text-gray-400">#}
 {#                            Don’t have an account yet? <a href="#" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign up</a>#}
 {#                        </p>#}
