@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block body %}
+    {% include "components/aside.html.twig" %}
+
+    <div class="p-4 md:ml-64">
+        <h1 class="text-custom-text">{{ content }}</h1>
+    </div>
+
+
+{% endblock %}
