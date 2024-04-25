@@ -1,5 +1,5 @@
 <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-    <a href="https://github.com/aironasstun" target="_blank" class="flex items-center space-x-3 rtl:space-x-reverse">
+    <a href="{{ path('app_home') }}" class="flex items-center space-x-3 rtl:space-x-reverse">
         <span class="self-center text-2xl font-semibold whitespace-nowrap">A.S.</span>
     </a>
     <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
@@ -18,17 +18,19 @@
     <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
         <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-custom-accent rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
             <li>
-                <a href="#" class="block py-2 px-3 rounded hover:bg-custom-secondary">Home</a>
-            </li>
-            <li>
                 <a href="https://www.linkedin.com/in/aironas-stunzenas" target="_blank" class="block py-2 px-3 rounded hover:bg-custom-secondary">LinkedIn</a>
             </li>
             <li>
                 <a href="https://github.com/aironasstun" target="_blank" class="block py-2 px-3 rounded hover:bg-custom-secondary">Github</a>
             </li>
-            <li>
-                <a href="{{ path('app_my_account') }}" class="block py-2 px-3 rounded hover:bg-custom-secondary">My account</a>
-            </li>
+            {% if app.user is not same as null %}
+                <li>
+                    <a href="{{ path('app_my_account') }}" class="block py-2 px-3 rounded hover:bg-custom-secondary">My account</a>
+                </li>
+                <li>
+                    <a href="{{ path('app_chat') }}" class="block py-2 px-3 rounded hover:bg-custom-secondary">Chat</a>
+                </li>
+            {% endif %}
         </ul>
     </div>
 </div>

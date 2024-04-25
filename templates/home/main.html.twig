@@ -2,12 +2,8 @@
 
 {% block body %}
 
-    {% include "header.html.twig" %}
+    {% include "components/header.html.twig" %}
 
-    {% include "jumbotron.html.twig" %}
-
-    {% if app.user is not same as null %}
-        {% include "components/chat/chat.html.twig" %}
-    {% endif %}
+    {% include "components/jumbotron.html.twig" %}
 
 {% endblock %}
