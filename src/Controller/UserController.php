@@ -54,6 +54,7 @@ class UserController extends AbstractController
     {
         return $this->render('user/show.html.twig', [
             'user' => $user,
+            'menuItems' => $this->menuService->getMenu(),
         ]);
     }
 
@@ -72,6 +73,7 @@ class UserController extends AbstractController
         return $this->render('user/edit.html.twig', [
             'user' => $user,
             'form' => $form,
+            'menuItems' => $this->menuService->getMenu(),
         ]);
     }
 
