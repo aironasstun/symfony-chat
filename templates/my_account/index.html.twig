@@ -5,11 +5,11 @@
 {% block body %}
     <section class="bg-custom-background">
         <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-            <div class="w-full bg-custom-secondary  rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 px-8 py-8">
+            <div class="p-4 shadow bg-custom-secondary-800 sm:p-5">
                 {{ form_start(form) }}
                 {{ form_widget(form) }}
 
-                <input type="submit">
+                <input class="text-custom-text py-2.5 px-5 text-sm border-none font-medium rounded-lg border bg-custom-secondary-600 hover:bg-custom-secondary-400" type="submit">
                 {{ form_end(form) }}
             </div>
         </div>

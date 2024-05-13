@@ -256,11 +256,11 @@
 {# Class #}
 
 {% block class_label -%}
-    block mb-2 text-sm font-medium text-gray-900 dark:text-white
+    block mb-2 text-sm font-medium text-custom-text dark:text-white
 {%- endblock class_label %}
 
 {% block class_input_radio_label -%}
-    ml-2 text-sm font-medium text-gray-900 dark:text-gray-300
+    ml-2 text-sm font-medium text-custom-text dark:text-gray-300
 {%- endblock class_input_radio_label %}
 
 {% block class_input_switch_label -%}
@@ -272,19 +272,19 @@
 {%- endblock class_input_switch_label_container %}
 
 {% block class_input_text -%}
-    text-gray-900 bg-gray-50 rounded-lg text-sm block w-full p-2.5 border border-gray-300 focus:z-10 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500
+    text-custom-text rounded-lg text-sm block w-full p-2.5 border bg-custom-secondary
 {%- endblock class_input_text %}
 
 {% block class_input_range -%}
-    w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700
+    w-full h-2 rounded-lg appearance-none cursor-pointer bg-custom-secondary
 {%- endblock class_input_range %}
 
 {% block class_input_file -%}
-    block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
+    block w-full text-sm text-custom-text border border-gray-300 rounded-lg cursor-pointer bg-custom-secondary
 {%- endblock class_input_file %}
 
 {% block class_input_radio -%}
-    w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600
+    w-4 h-4 text-custom-text bg-custom-secondary border-gray-300
 {%- endblock class_input_radio %}
 
 {% block class_input_checkbox -%}
@@ -304,7 +304,7 @@
 {%- endblock class_textarea %}
 
 {% block class_button -%}
-    text-gray-900 bg-white font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 border border-gray-200 hover:text-blue-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:bg-gray-800 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700
+    text-custom-text bg-custom-secondary font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 border border-gray-200 hover:text-blue-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:bg-gray-800 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700
 {%- endblock class_button %}
 
 {% block class_submit -%}
@@ -312,11 +312,11 @@
 {%- endblock class_submit %}
 
 {% block class_time_separator -%}
-    inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-x-0 border-gray-300 dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600
+    inline-flex items-center px-3 text-sm text-custom-text bg-gray-200 border border-x-0 border-gray-300 dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600
 {%- endblock class_time_separator %}
 
 {% block class_addon -%}
-    inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-gray-300 dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600
+    inline-flex items-center px-3 text-sm text-custom-text bg-gray-200 border border-gray-300 dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600
 {%- endblock class_addon %}
 
 {% block class_widget_addon_prepend -%}

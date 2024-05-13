@@ -5,14 +5,17 @@
 {% block body %}
         {% include "components/aside.html.twig" %}
     <div class="p-4 md:ml-64">
-        <div class="p-4 shadow bg-custom-secondary sm:p-5">
-            <h1>Edit User</h1>
-
-            {{ include('user/_form.html.twig', {'button_label': 'Update'}) }}
-
-            <a href="{{ path('app_user_index') }}">back to list</a>
-
-            {{ include('user/_delete_form.html.twig') }}
+        <div class="p-4 shadow bg-custom-secondary-800 sm:p-5">
+            <h1 class="text-lg text-custom-text pb-6">Edit User</h1>
+            {{ include('user/_form.html.twig') }}
+            <div class="flex items-center space-x-3 sm:space-x-4 pt-4">
+                <div>
+                    <a class='text-custom-text py-2.5 px-5 text-sm border-none font-medium rounded-lg border bg-custom-secondary-600 hover:bg-custom-secondary-400' href="{{ path('app_user_index') }}">Back to list</a>
+                </div>
+                <div>
+                    {{ include('user/_delete_form.html.twig') }}
+                </div>
+            </div>
         </div>
     </div>
 {% endblock %}

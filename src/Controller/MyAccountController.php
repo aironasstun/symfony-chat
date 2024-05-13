@@ -41,7 +41,7 @@ class MyAccountController extends AbstractController
                 $entityManager->flush();
             }
 
-            return $this->redirectToRoute('home');
+            return $this->redirectToRoute('app_home');
         }
 
         return $this->render('my_account/index.html.twig', [

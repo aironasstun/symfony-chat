@@ -6,8 +6,8 @@
     {% include "components/aside.html.twig" %}
     <div class="p-4 md:ml-64">
         <h1 class="text-xl text-custom-text">User index</h1>
-        <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+        <table class="w-full text-sm text-left rtl:text-right text-custom-text mb-4">
+            <thead class="text-xs text-custom-text bg-custom-accent-900">
             <tr>
                 <th scope="col" class="px-6 py-3">
                     Id
@@ -28,20 +28,20 @@
             </thead>
             <tbody>
             {% for user in users %}
-            <tr>
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+            <tr class="{{ loop.index is even ? 'bg-custom-primary-900' : 'bg-custom-secondary-900' }}">
+                <th scope="row" class="px-6 py-4 font-medium text-custom-text whitespace-nowrap">
                     {{ user.id }}
                 </th>
-                <td class="px-6 py-4">
+                <td class="px-6 py-4 text-custom-text">
                     {{ user.email }}
                 </td>
-                <td class="px-6 py-4">
+                <td class="px-6 py-4 text-custom-text">
                     {{ user.roles ? user.roles|json_encode : '' }}
                 </td>
-                <td class="px-6 py-4">
+                <td class="px-6 py-4 text-custom-text">
                     {{ user.chatUsername }}
                 </td>
-                <td class="px-6 py-4">
+                <td class="px-6 py-4 text-custom-text">
                     <a href="{{ path('app_user_show', {'id': user.id}) }}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Show</a>
                     <a href="{{ path('app_user_edit', {'id': user.id}) }}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                 </td>
@@ -54,6 +54,6 @@
             </tbody>
         </table>
 
-        <a href="{{ path('app_user_new') }}" class="bg-custom-accent hover:bg-custom-secondary focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none">Create new</a>
+        <a href="{{ path('app_user_new') }}" class="text-custom-text py-2.5 px-5 text-sm border-none font-medium rounded-lg border bg-custom-secondary-600 hover:bg-custom-secondary-400">Create new</a>
     </div>
 {% endblock %}
