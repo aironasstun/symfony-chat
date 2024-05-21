@@ -42,8 +42,8 @@
                     {{ user.chatUsername }}
                 </td>
                 <td class="px-6 py-4 text-custom-text">
-                    <a href="{{ path('app_user_show', {'id': user.id}) }}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Show</a>
-                    <a href="{{ path('app_user_edit', {'id': user.id}) }}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                    <a href="{{ path('app_admin_user_show', {'id': user.id}) }}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Show</a>
+                    <a href="{{ path('app_admin_user_edit', {'id': user.id}) }}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                 </td>
             </tr>
             {% else %}
@@ -54,6 +54,6 @@
             </tbody>
         </table>
 
-        <a href="{{ path('app_user_new') }}" class="text-custom-text py-2.5 px-5 text-sm border-none font-medium rounded-lg border bg-custom-secondary-600 hover:bg-custom-secondary-400">Create new</a>
+        <a href="{{ path('app_admin_user_new') }}" class="text-custom-text py-2.5 px-5 text-sm border-none font-medium rounded-lg border bg-custom-secondary-600 hover:bg-custom-secondary-400">Create new</a>
     </div>
 {% endblock %}

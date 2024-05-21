@@ -23,15 +23,15 @@
             <li>
                 <a href="https://github.com/aironasstun" target="_blank" class="block py-2 px-3 rounded hover:bg-custom-secondary">Github</a>
             </li>
+            <li>
+                <a href="{{ path('app_chat') }}" class="block py-2 px-3 rounded hover:bg-custom-secondary">Chat</a>
+            </li>
             {% if app.user is not same as null %}
                 <li>
                     <a href="{{ path('app_my_account') }}" class="block py-2 px-3 rounded hover:bg-custom-secondary">My account</a>
                 </li>
                 <li>
-                    <a href="{{ path('app_chat') }}" class="block py-2 px-3 rounded hover:bg-custom-secondary">Chat</a>
-                </li>
-                <li>
-                    <a href="{{ path('app_user_index') }}" class="block py-2 px-3 rounded hover:bg-custom-secondary">Dashboard</a>
+                    <a href="{{ path('app_admin_user_index') }}" class="block py-2 px-3 rounded hover:bg-custom-secondary">Dashboard</a>
                 </li>
             {% endif %}
         </ul>

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller\Service;
+namespace App\Service\Provider;
 
 class MenuService
 {
@@ -9,7 +9,7 @@ class MenuService
         return [
             ['name' => 'Home', 'path' => 'app_home'],
             ['name' => 'Chat', 'path' => 'app_chat'],
-            ['name' => 'Users', 'path' => 'app_user_index'],
+            ['name' => 'Users', 'path' => 'app_admin_user_index'],
     ];
     }
 }
